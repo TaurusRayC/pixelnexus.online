@@ -172,10 +172,19 @@
                 <div class="text-2xl font-bold text-white">
                     <span class="gradient-text">PixelNexus</span>
                 </div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#game" class="text-white hover:text-blue-300 transition-colors">Play Game</a>
-                    <a href="#features" class="text-white hover:text-blue-300 transition-colors">Features</a>
-                    <a href="#about" class="text-white hover:text-blue-300 transition-colors">About</a>
+                <div class="flex items-center space-x-6">
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#game" class="text-white hover:text-blue-300 transition-colors" data-en="Play Game" data-zh="开始游戏">Play Game</a>
+                        <a href="#features" class="text-white hover:text-blue-300 transition-colors" data-en="Features" data-zh="游戏特色">Features</a>
+                        <a href="#about" class="text-white hover:text-blue-300 transition-colors" data-en="About" data-zh="关于游戏">About</a>
+                    </div>
+                    <!-- Language Toggle -->
+                    <div class="language-toggle">
+                        <button id="langToggle" class="flex items-center space-x-2 text-white hover:text-blue-300 transition-colors bg-white bg-opacity-10 px-3 py-2 rounded-lg">
+                            <span class="text-sm">🌐</span>
+                            <span id="currentLang" class="text-sm font-medium">EN</span>
+                        </button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -188,10 +197,10 @@
             <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white">
                 <span class="gradient-text">PixelNexus</span>
             </h1>
-            <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto" data-en="Survive the ultimate monster apocalypse in this thrilling browser-based adventure game." data-zh="在这款令人兴奋的浏览器冒险游戏中，生存终极怪物末日。">
                 Survive the ultimate monster apocalypse in this thrilling browser-based adventure game.
             </p>
-            <button class="cta-button text-white px-8 py-4 rounded-full text-lg font-semibold" onclick="scrollToGame()">
+            <button class="cta-button text-white px-8 py-4 rounded-full text-lg font-semibold" onclick="scrollToGame()" data-en="Play Now - Free" data-zh="立即免费游戏">
                 Play Now - Free
             </button>
         </section>
@@ -200,7 +209,7 @@
         <section id="game" class="mb-16">
             <div class="game-container">
                 <div class="p-6">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Play PixelNexus Online</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center" data-en="Play PixelNexus Online" data-zh="在线游戏 PixelNexus">Play PixelNexus Online</h2>
                     <div class="game-iframe-container">
                         <iframe 
                             src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
@@ -215,7 +224,7 @@
 
         <!-- Features Section -->
         <section id="features" class="mb-16">
-            <h2 class="text-4xl font-bold text-white text-center mb-12">Game Features</h2>
+            <h2 class="text-4xl font-bold text-white text-center mb-12" data-en="Game Features" data-zh="游戏特色">Game Features</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="feature-card p-6 rounded-xl">
                     <div class="w-12 h-12 bg-blue-500 rounded-lg mb-4 flex items-center justify-center">
@@ -223,8 +232,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Epic Battles</h3>
-                    <p class="text-gray-600">Face off against hordes of monsters in intense combat scenarios that test your survival skills.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-en="Epic Battles" data-zh="史诗战斗">Epic Battles</h3>
+                    <p class="text-gray-600" data-en="Face off against hordes of monsters in intense combat scenarios that test your survival skills." data-zh="在激烈的战斗场景中对抗怪物群，测试你的生存技能。">Face off against hordes of monsters in intense combat scenarios that test your survival skills.</p>
                 </div>
                 
                 <div class="feature-card p-6 rounded-xl">
@@ -233,8 +242,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Skill Upgrades</h3>
-                    <p class="text-gray-600">Enhance your character with powerful abilities and weapons to become the ultimate survivor.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-en="Skill Upgrades" data-zh="技能升级">Skill Upgrades</h3>
+                    <p class="text-gray-600" data-en="Enhance your character with powerful abilities and weapons to become the ultimate survivor." data-zh="用强大的能力和武器增强你的角色，成为终极生存者。">Enhance your character with powerful abilities and weapons to become the ultimate survivor.</p>
                 </div>
                 
                 <div class="feature-card p-6 rounded-xl">
@@ -243,8 +252,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Endless Waves</h3>
-                    <p class="text-gray-600">Challenge yourself with increasingly difficult monster waves that push your limits.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800" data-en="Endless Waves" data-zh="无尽波次">Endless Waves</h3>
+                    <p class="text-gray-600" data-en="Challenge yourself with increasingly difficult monster waves that push your limits." data-zh="挑战越来越困难的怪物波次，突破你的极限。">Challenge yourself with increasingly difficult monster waves that push your limits.</p>
                 </div>
             </div>
         </section>
@@ -252,31 +261,31 @@
         <!-- About Section -->
         <section id="about" class="mb-16">
             <div class="glass-effect p-8 rounded-xl">
-                <h2 class="text-4xl font-bold text-white mb-6 text-center">About PixelNexus</h2>
+                <h2 class="text-4xl font-bold text-white mb-6 text-center" data-en="About PixelNexus" data-zh="关于 PixelNexus">About PixelNexus</h2>
                 <div class="max-w-4xl mx-auto text-white space-y-6">
-                    <p class="text-lg leading-relaxed">
+                    <p class="text-lg leading-relaxed" data-en="PixelNexus is an immersive monster survival game that combines intense action with strategic gameplay. Set in a post-apocalyptic world overrun by terrifying creatures, you must use your wits, reflexes, and combat skills to survive wave after wave of relentless monster attacks." data-zh="PixelNexus 是一款沉浸式怪物生存游戏，将激烈的动作与战略游戏相结合。在被可怕生物占领的后末日世界中，你必须运用智慧、反应能力和战斗技巧来抵御一波又一波无情的怪物攻击。">
                         PixelNexus is an immersive monster survival game that combines intense action with strategic gameplay. 
                         Set in a post-apocalyptic world overrun by terrifying creatures, you must use your wits, reflexes, 
                         and combat skills to survive wave after wave of relentless monster attacks.
                     </p>
                     
-                    <h3 class="text-2xl font-semibold text-blue-300">Gameplay Overview</h3>
-                    <p class="text-lg leading-relaxed">
+                    <h3 class="text-2xl font-semibold text-blue-300" data-en="Gameplay Overview" data-zh="游戏玩法概述">Gameplay Overview</h3>
+                    <p class="text-lg leading-relaxed" data-en="The game features a unique progression system where players can upgrade their weapons, enhance their abilities, and unlock new survival tactics. Each wave presents increasingly challenging monsters with different attack patterns and weaknesses, requiring players to adapt their strategies continuously." data-zh="游戏拥有独特的进度系统，玩家可以升级武器、增强能力并解锁新的生存战术。每一波都会呈现越来越具有挑战性的怪物，它们有不同的攻击模式和弱点，需要玩家不断调整策略。">
                         The game features a unique progression system where players can upgrade their weapons, enhance their 
                         abilities, and unlock new survival tactics. Each wave presents increasingly challenging monsters with 
                         different attack patterns and weaknesses, requiring players to adapt their strategies continuously.
                     </p>
                     
-                    <h3 class="text-2xl font-semibold text-purple-300">Key Mechanics</h3>
-                    <p class="text-lg leading-relaxed">
+                    <h3 class="text-2xl font-semibold text-purple-300" data-en="Key Mechanics" data-zh="核心机制">Key Mechanics</h3>
+                    <p class="text-lg leading-relaxed" data-en="Master the art of movement and timing as you navigate through hostile environments. Collect resources to craft better equipment, discover powerful artifacts, and unlock special abilities that can turn the tide of battle. The game's dynamic difficulty system ensures that both newcomers and experienced players will find the perfect challenge level." data-zh="掌握移动和时机的艺术，在敌对环境中导航。收集资源制作更好的装备，发现强大的神器，解锁可以扭转战局的特殊能力。游戏的动态难度系统确保新手和有经验的玩家都能找到完美的挑战级别。">
                         Master the art of movement and timing as you navigate through hostile environments. Collect resources 
                         to craft better equipment, discover powerful artifacts, and unlock special abilities that can turn the 
                         tide of battle. The game's dynamic difficulty system ensures that both newcomers and experienced players 
                         will find the perfect challenge level.
                     </p>
                     
-                    <h3 class="text-2xl font-semibold text-pink-300">Browser-Based Excellence</h3>
-                    <p class="text-lg leading-relaxed">
+                    <h3 class="text-2xl font-semibold text-pink-300" data-en="Browser-Based Excellence" data-zh="浏览器卓越体验">Browser-Based Excellence</h3>
+                    <p class="text-lg leading-relaxed" data-en="PixelNexus runs seamlessly in your web browser without any downloads or installations required. The game is optimized for both desktop and mobile devices, ensuring smooth gameplay across all platforms. Jump into the action instantly and experience high-quality graphics and responsive controls that rival traditional gaming platforms." data-zh="PixelNexus 在你的网络浏览器中无缝运行，无需任何下载或安装。游戏针对桌面和移动设备进行了优化，确保在所有平台上都能流畅游戏。立即投入行动，体验高质量图形和响应式控制，可与传统游戏平台媲美。">
                         PixelNexus runs seamlessly in your web browser without any downloads or installations required. 
                         The game is optimized for both desktop and mobile devices, ensuring smooth gameplay across all platforms. 
                         Jump into the action instantly and experience high-quality graphics and responsive controls that rival 
@@ -288,11 +297,11 @@
 
         <!-- Call to Action -->
         <section class="text-center">
-            <h2 class="text-4xl font-bold text-white mb-6">Ready to Survive?</h2>
-            <p class="text-xl text-white mb-8 max-w-2xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-6" data-en="Ready to Survive?" data-zh="准备好生存了吗？">Ready to Survive?</h2>
+            <p class="text-xl text-white mb-8 max-w-2xl mx-auto" data-en="Join thousands of players in the ultimate monster survival experience. No downloads, no registration required." data-zh="加入成千上万的玩家，体验终极怪物生存体验。无需下载，无需注册。">
                 Join thousands of players in the ultimate monster survival experience. No downloads, no registration required.
             </p>
-            <button class="cta-button text-white px-10 py-5 rounded-full text-xl font-semibold" onclick="scrollToGame()">
+            <button class="cta-button text-white px-10 py-5 rounded-full text-xl font-semibold" onclick="scrollToGame()" data-en="Start Playing PixelNexus" data-zh="开始游戏 PixelNexus">
                 Start Playing PixelNexus
             </button>
         </section>
@@ -307,9 +316,9 @@
                     <p class="text-sm mt-1">© 2025 PixelNexus. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-white hover:text-blue-300 transition-colors">Privacy Policy</a>
-                    <a href="#" class="text-white hover:text-blue-300 transition-colors">Terms of Service</a>
-                    <a href="#" class="text-white hover:text-blue-300 transition-colors">Contact</a>
+                    <a href="#" class="text-white hover:text-blue-300 transition-colors" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a>
+                    <a href="#" class="text-white hover:text-blue-300 transition-colors" data-en="Terms of Service" data-zh="服务条款">Terms of Service</a>
+                    <a href="#" class="text-white hover:text-blue-300 transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
                 </div>
             </div>
         </div>
@@ -317,12 +326,59 @@
 
     <!-- JavaScript -->
     <script>
+        // Language switching functionality
+        let currentLanguage = 'en';
+        
+        const translations = {
+            'title': {
+                'en': 'PixelNexus - Epic Monster Survival Game Online | Play Free Now',
+                'zh': 'PixelNexus - 史诗怪物生存游戏在线 | 立即免费游戏'
+            },
+            'description': {
+                'en': 'Play PixelNexus, an exciting monster survival game online for free. Battle fierce creatures, upgrade your skills, and survive endless waves in this thrilling browser-based adventure.',
+                'zh': '免费在线游戏 PixelNexus，一款令人兴奋的怪物生存游戏。与凶猛的生物战斗，升级你的技能，在这款激动人心的浏览器冒险游戏中生存无尽的波次。'
+            }
+        };
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
+            
+            // Update all elements with data-en and data-zh attributes
+            document.querySelectorAll('[data-en]').forEach(element => {
+                const enText = element.getAttribute('data-en');
+                const zhText = element.getAttribute('data-zh');
+                
+                if (currentLanguage === 'zh') {
+                    element.textContent = zhText;
+                } else {
+                    element.textContent = enText;
+                }
+            });
+            
+            // Update language toggle button
+            const currentLangEl = document.getElementById('currentLang');
+            currentLangEl.textContent = currentLanguage === 'en' ? 'EN' : '中文';
+            
+            // Update document title and meta description
+            document.title = translations.title[currentLanguage];
+            document.querySelector('meta[name="description"]').setAttribute('content', translations.description[currentLanguage]);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLanguage === 'en' ? 'en' : 'zh-CN';
+        }
+
         function scrollToGame() {
             document.getElementById('game').scrollIntoView({ 
                 behavior: 'smooth',
                 block: 'start'
             });
         }
+
+        // Initialize language toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const langToggle = document.getElementById('langToggle');
+            langToggle.addEventListener('click', toggleLanguage);
+        });
 
         // Add smooth scrolling to all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -351,17 +407,19 @@
         navToggle.className = 'md:hidden text-white p-2';
         navToggle.innerHTML = '☰';
         navToggle.onclick = function() {
-            const nav = document.querySelector('nav div:last-child');
-            nav.classList.toggle('hidden');
-            nav.classList.toggle('flex');
-            nav.classList.toggle('flex-col');
-            nav.classList.toggle('absolute');
-            nav.classList.toggle('top-full');
-            nav.classList.toggle('left-0');
-            nav.classList.toggle('w-full');
-            nav.classList.toggle('bg-black');
-            nav.classList.toggle('bg-opacity-50');
-            nav.classList.toggle('p-4');
+            const navItems = document.querySelector('nav .hidden.md\\:flex');
+            const languageToggle = document.querySelector('.language-toggle');
+            
+            if (navItems.classList.contains('hidden')) {
+                navItems.classList.remove('hidden');
+                navItems.classList.add('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-black', 'bg-opacity-50', 'p-4', 'space-y-4');
+                navItems.style.zIndex = '1000';
+                languageToggle.classList.add('mt-4');
+            } else {
+                navItems.classList.add('hidden');
+                navItems.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'w-full', 'bg-black', 'bg-opacity-50', 'p-4', 'space-y-4');
+                languageToggle.classList.remove('mt-4');
+            }
         };
         document.querySelector('nav').appendChild(navToggle);
     </script>
